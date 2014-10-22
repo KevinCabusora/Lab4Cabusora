@@ -1,3 +1,9 @@
+/*******************************
+ * Author:	C2C Kevin Cabusora
+ * Created:	22 Oct 2014
+ * Description:	Lab 4: Main Functionality
+ *******************************/
+
 #include <msp430g2553.h>
 
 extern void init();
