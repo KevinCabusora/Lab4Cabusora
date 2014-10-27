@@ -64,3 +64,30 @@ What is the role of the .global directive in an .asm file (used in lines 28-32)?
 •	Global refers to a file being either defined in a program which could be used in other programs or that it is referenced in the current program but defined elsewhere.
 
 # Main Lab
+
+## Basic Functionality
+
+For basic functionality, the goal was to make an etch-a-sketch.  The basis of the code which came from Lab 3 was provided, the only necessary modification was to use the auxiliary button to switch between black and white (eraser).  To do this, I defined BLACK and WHITE, and set the Aux Button to toggle color between BLACK and WHITE.  Here is the code I added in the while loop in the main.c file:
+~~~
+} else if (AUX_BUTTON == 0) {
+				while(AUX_BUTTON == 0);
+				if (color == BLACK) color = WHITE;
+				else if (color == WHITE) color = BLACK;
+				button_press = TRUE;
+~~~
+
+In the nokia.asm file, I added register R14 as the register for adjusting color.  A block would be drawn as a 8 pixel column multiplied 8 times horizontally.
+
+## B Functionality
+
+The goal for this portion was to have a ball simply bounce around the screen.  In editing the basic functionality, I replaced the push-button code in the main.c file with code that would tell the ball when to bounce.  I got the x and y limits by experimentally playing around with the code to make sure the ball didn't go off the screen, only bounce in the middle, etc.
+
+In the nokia file, I took out the color change register.  I added a bit of delay so that the program would not be moving blazingly fast.  To perform this, I added a couple of nop operations to eat up some clock cycles.
+
+### Extra Functionality
+
+The extra functionality I pursued was forming the block into a ball shape.  Therefore, I manually moved the corresponding hex code for each column, and then called to #writeNokiaByte each time.
+
+# Debugging
+
+Most of the debugging I did had to do for B functionality.  It mostly involved finding the x and y limits for the block to bounce around, at a place where part of the ball would not disappear out of the scren.  I also deleted 
