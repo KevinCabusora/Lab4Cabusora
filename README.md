@@ -3,6 +3,8 @@ Lab4Cabusora
 
 Assembly -> C Etch-n-Sketch
 
+C2C Kevin Cabusora, Dr. George York, ECE 382, M2
+
 # Prelab
 
 We were directed to identify a datatype given a unsigned/signed size of a variable and to list the max and min values that can be represented by the datatype.  To do this, I consulted p. 76 of the C Compiler User's Guide.
@@ -90,4 +92,8 @@ The extra functionality I pursued was forming the block into a ball shape.  Ther
 
 # Debugging
 
-Most of the debugging I did had to do for B functionality.  It mostly involved finding the x and y limits for the block to bounce around, at a place where part of the ball would not disappear out of the scren.  I also deleted 
+Most of the debugging I did had to do for B functionality.  It mostly involved finding the x and y limits for the block to bounce around, at a place where part of the ball would not disappear out of the scren.  I also added the .global moveDelay which I forgot since it was not being recognized by the compiler.
+
+# Documentation
+
+C2C Erik Thompson helped point out that I forgot to add the .global moveDelay line.  I also received his help in finding out the corresponding hex code for each column of the block to turn it into a more ball-like shape.  C2C Alex Leaf demonstrated to me how to use multiple nop's to slow to code down.
