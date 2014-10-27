@@ -1,8 +1,8 @@
-/*******************************
- * Author:		C2C Kevin Cabusora
- * Created:		22 Oct 2014
- * Description:	Lab 4: Main Functionality
- *******************************/
+
+ //Author:		C2C Kevin Cabusora
+ //Created:		22 Oct 2014
+ //Description:		Lab 4: Main Functionality
+
 
 	.cdecls C,LIST,"msp430.h"		; BOILERPLATE	Include device header file
 
